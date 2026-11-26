@@ -27,8 +27,9 @@
   },
   "scripts": {
     "dev": "concurrently 'vite' \"nodemon server.js\"",
-    "build": "vite build",
+    "build": "npm --prefix client ci && npm --prefix client run build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "start": "node server.js",
     "preview": "vite preview"
   },
   "name": "mern_skeleton",
